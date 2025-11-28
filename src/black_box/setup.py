@@ -25,7 +25,7 @@ setup(
 entry_points={
     'console_scripts': [
         'black_box_node = black_box.black_box_node:main',
-        'turtle_controller_node = black_box.turtle_controller_node:main',
+        'robot_controller_node = black_box.robot_controller_node:main',
     ],
 },
 

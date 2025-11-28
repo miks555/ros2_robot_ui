@@ -1,0 +1,51 @@
+# ===========================
+#   ROS2 / Colcon ignore
+# ===========================
+
+# global ROS2 build artifacts
+build/
+install/
+log/
+
+# keep empty directories if needed
+!build/.gitkeep
+!install/.gitkeep
+!log/.gitkeep
+
+# ===========================
+#   docker/dev folders
+# ===========================
+
+cache/humble/build/*
+cache/humble/install/*
+cache/humble/log/*
+
+# keep .gitkeep inside cache folders
+!cache/humble/build/.gitkeep
+!cache/humble/install/.gitkeep
+!cache/humble/log/.gitkeep
+
+# ===========================
+#   Python cache
+# ===========================
+**/__pycache__/
+*.pyc
+*.pyo
+
+# Egg metadata
+*.egg-info/
+*.egg
+
+# ===========================
+#   Colcon misc
+# ===========================
+.colcon_install_layout
+.colcon_last_build
+*.log
+
+# ===========================
+#   VSCode / Devcontainer
+# ===========================
+.vscode/
+.devcontainer/.cache/
+

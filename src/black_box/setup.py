@@ -1,4 +1,5 @@
 from setuptools import find_packages, setup
+from glob import glob
 
 package_name = 'black_box'
 
@@ -10,6 +11,7 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
+        ('share/' + package_name + '/launch', glob('launch/*.py')),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -22,11 +24,10 @@ setup(
             'pytest',
         ],
     },
-entry_points={
-    'console_scripts': [
-        'black_box_node = black_box.black_box_node:main',
-        'robot_controller_node = black_box.robot_controller_node:main',
-    ],
-},
-
+    entry_points={
+        'console_scripts': [
+            'black_box_node = black_box.black_box_node:main',
+            'robot_controller_node = black_box.robot_controller_node:main',
+        ],
+    },
 )
